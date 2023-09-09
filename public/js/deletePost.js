@@ -13,7 +13,7 @@ const deletePost = async (postId) => {
 
 const deletePostHandler = (event) => {
   if (event.target.matches(".deletePost")) {
-    const postId = event.target.getAttribute("data-postId");
+    const postId = event.target.getAttribute("data-post-id");
     deletePost(postId);
   }
 };
