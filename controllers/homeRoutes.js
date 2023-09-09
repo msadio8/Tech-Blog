@@ -1,59 +1,17 @@
 const router = require('express').Router();
-const sequelize = require('../config/connection');
-const { Activity, User } = require('../models');
+const { Post , User, Comment } = require("../models");
 const withAuth = require('../utils/auth');
 
-router.get('/', async (req, res) => {
+router.get("/", async (req, res) => {
   try {
-    // Get all activitiess and JOIN with user data
-    const activityData = await Activity.findAll({
-      include: [
-        {
-          model: User,
-          attributes: ['email'],
-        },
-      ],
-    });
-
-    // Serialize data so the template can read it
-    const activities = activityData.map((activity) => activity.get({ plain: true }));
-
-    // Pass serialized data and session flag into template
-    res.render('homepage', { 
-      activities, 
-      logged_in: req.session.logged_in 
-    });
-  } catch (err) {
-    console.log(err)
-    res.status(500).json(err);
+    const postData = await post.findAll({
+      include: [{ model: user, attributes: [username]}]
+    })
   }
-});
+})
 
-router.get('/activity', async (req, res) => {
-  try {
-    // Get all activitiess and JOIN with user data
-    const activityData = await Activity.findAll({
-      include: [
-        {
-          model: User,
-          attributes: ['email'],
-        },
-      ],
-    });
 
-    // Serialize data so the template can read it
-    const activities = activityData.map((activity) => activity.get({ plain: true }));
-
-    // Pass serialized data and session flag into template
-    res.render('activity', { 
-      activities, 
-      logged_in: req.session.logged_in 
-    });
-  } catch (err) {
-    console.log(err)
-    res.status(500).json(err);
-  }
-});
+  
 
 // Use withAuth middleware to prevent access to route
 router.get('/profile', withAuth, async (req, res) => {
