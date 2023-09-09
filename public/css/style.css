@@ -1,4 +1,39 @@
+* {
+  box-sizing: border-box !important;
+}
 
+:root {
+  --text: #dfdfec;
+}
 
+body {
+  font-family: Arial;
+  color: var(--text);
+  margin: 0;
+}
+.nav-title {
+  margin-left: 1rem;
+}
 
+/* .splash h1 {
+  text-align: center;
+} */
 
+.buttons {
+  margin: 10%;
+  text-align: center;
+}
+#form-container {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+.jcc {
+  display: flex;
+  justify-content: center;
+}
+
+.fit-form {
+  width: 650px;
+  max-width: 95%;
+}
