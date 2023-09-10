@@ -1,4 +1,4 @@
-const postId = window.location.toString().split("/")[
+const post_id = window.location.toString().split("/")[
   window.location.toString().split("/").length - 1
 ];
 // here is to update post
@@ -10,7 +10,7 @@ const upadteTechBlogPostHandler = async (event) => {
     .querySelector("#content-upadate-tech-post")
     .value.trim();
   if (title && content) {
-    const response = await fetch(`/api/post/${postId}`, {
+    const response = await fetch(`/api/post/${post_id}`, {
       method: "PUT",
       body: JSON.stringify({ title, content }),
       headers: { "Content-Type": "application/json" },
@@ -28,7 +28,7 @@ const upadteTechBlogPostHandler = async (event) => {
 const deleteTechPostFormHandler = async (event) => {
   event.preventDefault();
 
-  const response = await fetch(`/api/post/${postId}`, {
+  const response = await fetch(`/api/post/${post_id}`, {
     method: "DELETE",
   });
 

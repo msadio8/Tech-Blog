@@ -5,7 +5,7 @@ const deletePost = async (postId) => {
   });
 
   if (response.ok) {
-    document.location.replace("/dashboard");
+    document.location.replace();
   } else {
     alert("Failed to delete post.");
   }
@@ -13,8 +13,8 @@ const deletePost = async (postId) => {
 
 const deletePostHandler = (event) => {
   if (event.target.matches(".deletePost")) {
-    const postId = event.target.getAttribute("data-post-id");
-    deletePost(postId);
+    const post_id = event.target.getAttribute("data-post-id");
+    deletePost(post_id);
   }
 };
 document.addEventListener("click", deletePostHandler);

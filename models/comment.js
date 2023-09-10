@@ -11,21 +11,21 @@ Comment.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    commentText: {
+    comment_text: {
       type: DataTypes.STRING, // data type of the column in our table
       allowNull: false, // if not null then it will be required to enter a value for this field when creating an entry
       validate: {
         len: [1],
       },
     },
-    userId: {
+    user_id: {
       type: DataTypes.INTEGER,
       references: {
         model: "user",
         key: "id",
       }, // foreign key reference to user model and its 'id' field
     },
-    postId: {
+    post_id: {
       type: DataTypes.INTEGER,
       references: {
         model: "post",

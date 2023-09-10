@@ -1,34 +1,25 @@
-<!-- Modal Button -->
-
-<div class='jcc'>
-  <div class='fit-form'>
-    <h4>Login</h4>
-    <div>
-      <form class='form login-form'>
-        <div>
-          <div class='input-field'>
-            <input id='email' type='email' class='validate' />
-            <label for='email'>email</label>
-          </div>
-          <div class='input-field'>
-            <input id='password' type='text' class='validate' />
-            <label for='password' class='validate'>password</label>
-          </div>
-          <div class='input-field'>
-            <button
-              type='login'
-              class='waves-effect waves-light btn findbtn'
-            >Login</button>
-          </div>
-          
-          <div class='input-field'>
-            <a href='/signup'>need an account? click here 👉🏻 to sign up </a>
-          </div>
-
-        </div>
-      </form>
+<main class="container mt-5">
+  <h1 class="mb-4">Login</h1>
+  <form class="tech-login-form">
+    <div class="mb-3">
+      <label for="username" class="form-label">Username</label>
+      <input
+        type="text"
+        class="form-control"
+        id="username-tech-login"
+        placeholder="Username"
+      />
     </div>
-  </div>
-</div>
+    <div class="mb-3">
+      <label for="password" class="form-label">Password</label>
+      <input
+        type="password"
+        class="form-control"
+        id="password-tech-login"
+        placeholder="Password"
+      />
+    </div>
+    <button type="submit" class="btn btn-primary">Log In</button>
+  </form>
 
-<script src='./js/login.js'></script>
+</main>

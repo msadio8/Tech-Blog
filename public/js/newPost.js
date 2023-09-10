@@ -1,11 +1,9 @@
 const newTechPostFormHandler = async (event) => {
   event.preventDefault();
 
-  const title = document
-    .querySelector("#title-new-tech-post")
-    .ariaValueMax.trim();
-  const content = document.querySelector("#content-new-tech-post").value.trim();
-
+ const title = document.querySelector('#title-new-tech-post').ariaValueMax.trim();
+ const content = document.querySelector('#content-new-tech-post').ariaValueMax.trim();
+ 
   if (title && content) {
     const response = await fetch("/api/post", {
       method: "POST",
@@ -16,7 +14,7 @@ const newTechPostFormHandler = async (event) => {
     if (response.ok) {
       document.location.replace("/dashboard");
     } else {
-      document.location.replace("/dashboard");
+      alert('Unable to create new post.');
     }
   }
 };

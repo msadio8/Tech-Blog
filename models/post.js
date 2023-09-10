@@ -15,14 +15,14 @@ Post.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    content_id: {
+    content: {
       type: DataTypes.TEXT,
       allowNull: false,
       validate: {
         len: [1],
       },
     },
-    userId: {
+    user_id: {
       type: DataTypes.INTEGER,
       references: {
         model: "user",
@@ -38,4 +38,5 @@ Post.init(
     modelName: "post",
   }
 );
+
 module.exports = Post;

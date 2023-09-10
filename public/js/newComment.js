@@ -1,7 +1,7 @@
 const newTechCommentFormHandler = async (event) => {
   event.preventDefault();
 
-  const postId = parseInt(window.location.pathname.split("/").pop());
+  const post_id = parseInt(window.location.pathname.split("/").pop());
 
   const content = document
     .querySelector("#content-new-tech-comment")
@@ -10,7 +10,7 @@ const newTechCommentFormHandler = async (event) => {
   if (content) {
     const response = await fetch(`/api/comments`, {
       method: "POST",
-      body: JSON.stringify({ commentText: content, postId }), //this is the data we are sending to our backend
+      body: JSON.stringify({ commentText: content, post_id }), //this is the data we are sending to our backend
       headers: { "Content-Type": "application/json" },
     });
 

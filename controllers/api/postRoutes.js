@@ -66,7 +66,7 @@ router.put("/:id", withAuth, async (req, res) => {
 router.delete("/:id", withAuth, async (req, res) => {
   try {
     await Comment.destroy({
-      where: { postId: req.params.id },
+      where: { post_id: req.params.id },
     });
 
     const deletedPost = await Post.destroy({
