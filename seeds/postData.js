@@ -2,30 +2,29 @@ const { Post } = require("../models");
 
 const postData = [
   {
-    title: "The Best Way to Learn React",
+    title: "Latest Blog Post",
     content: " This is about ways how to learn React",
     user_id: 1,
   },
   {
-    title: "How To Use Redux In Your Next Project?",
+    title: "Next Project Blog Post?",
     content: "This article will help you use redux in your next project.",
     user_id: 2,
   },
   {
-    title: "Why You Should Start Learning Node.js",
+    title: "Node.js Blog Post",
     content:
       "Node.js has become one of the most popular programming languages for web development.",
     user_id: 3,
   },
   {
-    title: "What Is The Difference Between A Framework And Library?",
+    title: " Framework And Library Blog Post",
     content:
       "A framework provides a structure and starting point for building an application while libraries provide tools that can be used within applications or frameworks.",
     user_id: 4,
   },
   {
-    title:
-      "React vs Angular 2 vs Vue.js – Which One Do I Choose For My Web App Development Projects? ",
+    title: "Web App Development Projects Blog Post ",
     content:
       "Angular and Vue are both JavaScript frameworks that can be used with TypeScript or plain JavaScript codebases.",
     user_id: 5,
@@ -33,3 +32,4 @@ const postData = [
 ];
 const seedPosts = () => Post.bulkCreate(postData);
 module.exports = seedPosts;
+

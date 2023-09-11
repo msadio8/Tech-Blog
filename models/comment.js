@@ -12,21 +12,23 @@ Comment.init(
       autoIncrement: true,
     },
     comment_text: {
-      type: DataTypes.STRING, // data type of the column in our table
-      allowNull: false, // if not null then it will be required to enter a value for this field when creating an entry
+      type: DataTypes.STRING,
+      allowNull: false,
       validate: {
         len: [1],
       },
     },
     user_id: {
       type: DataTypes.INTEGER,
+      allowNull: false,
       references: {
         model: "user",
         key: "id",
-      }, // foreign key reference to user model and its 'id' field
+      },
     },
     post_id: {
       type: DataTypes.INTEGER,
+      allowNull: false,
       references: {
         model: "post",
         key: "id",
@@ -34,10 +36,12 @@ Comment.init(
     },
   },
   {
-    sequelize,
-    freezeTableName: true,
-    underscored: true,
-    modelName: "comment",
+  sequelize,
+  timestamps: true,
+  freezeTableName: true,
+  underscored: true,
+  modelName: "comment",
   }
-);
-module.exports = Comment;
+  );
+  
+  module.exports = Comment;

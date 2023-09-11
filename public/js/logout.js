@@ -1,3 +1,4 @@
+// Logout function to send request to log out the user
 const techLogout = async () => {
   const response = await fetch('/api/users/logout', {
     method: 'POST',
@@ -5,12 +6,12 @@ const techLogout = async () => {
   });
 
   if (response.ok) {
-    document.location.replace('/');
+    document.location.replace('/'); // When successful, load the homepage
   } else {
-    alert(response.statusText);
+    alert('Failed to log out.'); // When unsuccessful, show alert
   }
 };
-
+// Add an event listener to the logout button
 const techLogoutButton = document.querySelector('#tech-logout');
 if (techLogoutButton) {
   techLogoutButton.addEventListener('click', techLogout);
