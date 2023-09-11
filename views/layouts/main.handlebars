@@ -26,8 +26,8 @@
         <div class="nav-wrapper">
           <ul class="left hide-on-med-and-down">
             
-            <li class="nav-item"><a href="/">Home</a></li>
-            <li class="nav-item"><a href="/dasboard">Dashboard</a></li>
+            <li class="nav-item"><a "nav-link" href="/">Home</a></li>
+            <li class="nav-item"><a class="nav-item" href="/dashboard">Dashboard</a></li>
 
           {{#if logged_in}}
             <li class="nav-item"><a class="nav-link" href="#" id="tech-logout">Logout</a></li>
@@ -38,7 +38,7 @@
           </ul>
         </div>
         <div class="nav-content">
-          <span class="nav-title">Tech Blog</span>
+          <a class="nav-title" href="/">Tech Blog</a>
 
         </div>
       </nav>
@@ -50,7 +50,7 @@
     </main>
 
     <!-- Sticky Footer -->
-    <footer class="page-footer teal lighten-1">
+    <footer class="page-footer teal lighten-1" style="position: fixed; bottom: 0; width: 100%;">
       <div class="container">
         <div class="footer-bar">
           <div>© 2023 Copyright </div>
