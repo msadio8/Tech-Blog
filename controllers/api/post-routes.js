@@ -1,6 +1,6 @@
 const router = require("express").Router();
 const { Post, User, Comment } = require("../../models");
-const withAuth = require("../../utils/auth");
+const withAuth = require("../../utils/auth.js");
 // Get all posts with associated username
 router.get("/", async (req, res) => {
   try {

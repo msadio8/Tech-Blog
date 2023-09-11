@@ -1,7 +1,7 @@
 // Import necessary packages and models
 const router = require("express").Router();
 const { Post, User, Comment } = require("../models");
-const withAuth = require("../utils/auth");
+const withAuth = require("../utils/auth.js");
 
 // Route to render homepage
 router.get("/", async (req, res) => {
