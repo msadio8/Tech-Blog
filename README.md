@@ -10,6 +10,7 @@ https://github.com/msadio8/Tech-Blog
 
 ## Website URL on Heroku
 
+https://tech-blogmvc-6b76500c3c3a.herokuapp.com/
 
 ## Table of Contents
 * [GitHub Repo URL](#github-repo-url)
