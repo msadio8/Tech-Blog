@@ -22,7 +22,7 @@ https://tech-blogmvc-6b76500c3c3a.herokuapp.com/
 * [CreateBlog Page](#createblog-page)
 
 ## Technologies Used
-The Activity Tracker website is built using the following technologies:
+The Tech Blog website is built using the following technologies:
 
 1. Boot Camp Materials - Module 14: Model-View-Controller (MVC)
 2. Prior Knowledge and experience
